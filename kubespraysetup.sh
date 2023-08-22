@@ -6,6 +6,7 @@ pip install -r requirements.txt
 
 cp -rfp inventory/sample inventory/mycluster
 declare -a IPS=(ip)
+echo ${IPS[@]} node1 >> /etc/hosts 
 CONFIG_FILE=inventory/mycluster/hosts.yaml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
 
 ssh-copy-id $USER@${IPS[@]}
