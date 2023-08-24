@@ -1,0 +1,16 @@
+wordpress:
+  image: wordpress:latest
+  port: 80
+  ingressHost: wordpress.example.com
+
+mysql:
+  image: mysql:latest
+  rootPassword: rootpassword
+  dbName: wordpressdb
+  dbUser: wordpressuser
+  dbPassword: wordpresspassword
+
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin:latest
+  port: 80
+  ingressHost: phpmyadmin.example.com
